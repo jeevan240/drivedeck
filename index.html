@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveDeck | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="dd-header">
+    <div class="dd-container dd-header-container">
+      <a href="index.html" class="dd-logo">DriveDeck</a>
+      <button class="dd-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="dd-nav">
+        <ul class="dd-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dd-nav-auth-guest"><a href="login.html">Login</a></li>
+          <li class="dd-nav-auth-guest"><a href="signup.html">Create Account</a></li>
+          <li class="dd-nav-auth-user" style="display:none"><span class="dd-nav-user-name"></span></li>
+          <li class="dd-nav-auth-user" style="display:none"><a href="#" class="dd-btn-logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="dd-hero">
+      <div class="dd-container dd-hero-content">
+        <div class="dd-hero-text">
+          <h1>Find Your Next Car with DriveDeck</h1>
+          <p>Browse curated listings, compare features, and manage your wishlist in one seamless experience.</p>
+          <form class="dd-hero-search" id="home-search-form">
+            <div class="dd-form-group">
+              <label for="home-search-input">Search cars</label>
+              <input type="text" id="home-search-input" name="query" placeholder="Search by model, brand, or keywords">
+            </div>
+            <div class="dd-form-group">
+              <label for="home-search-budget">Budget</label>
+              <select id="home-search-budget" name="budget">
+                <option value="">Any budget</option>
+                <option value="10000">Up to ₹10,00,000</option>
+                <option value="20000">Up to ₹20,00,000</option>
+                <option value="30000">Up to ₹30,00,000</option>
+              </select>
+            </div>
+            <div class="dd-form-group">
+              <label for="home-search-fuel">Fuel type</label>
+              <select id="home-search-fuel" name="fuel">
+                <option value="">Any</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+                <option value="Electric">Electric</option>
+              </select>
+            </div>
+            <button type="submit" class="dd-btn dd-btn-primary">Search Inventory</button>
+          </form>
+        </div>
+        <div class="dd-hero-highlight">
+          <div class="dd-hero-stats">
+            <div class="dd-hero-stat">
+              <span class="dd-hero-stat-value">500+</span>
+              <span class="dd-hero-stat-label">Curated Cars</span>
+            </div>
+            <div class="dd-hero-stat">
+              <span class="dd-hero-stat-value">50+</span>
+              <span class="dd-hero-stat-label">Trusted Dealers</span>
+            </div>
+            <div class="dd-hero-stat">
+              <span class="dd-hero-stat-value">4.8★</span>
+              <span class="dd-hero-stat-label">Buyer Ratings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="dd-section dd-featured-cars">
+      <div class="dd-container">
+        <header class="dd-section-header">
+          <h2>Featured Cars</h2>
+          <p>Handpicked inventory to get you started quickly.</p>
+        </header>
+        <div class="dd-cars-grid" id="featured-cars-grid">
+          <article class="dd-car-card dd-car-card-placeholder">
+            <div class="dd-car-image-placeholder"></div>
+            <div class="dd-car-content">
+              <h3 class="dd-car-title">Sample Car Name</h3>
+              <p class="dd-car-price">₹XX,XX,XXX</p>
+              <p class="dd-car-meta">Year • Mileage • Fuel</p>
+              <div class="dd-car-actions">
+                <a href="car-details.html" class="dd-btn dd-btn-outline">View Details</a>
+                <button class="dd-btn dd-btn-ghost" type="button">Add to Wishlist</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="dd-section-cta">
+          <a href="inventory.html" class="dd-btn dd-btn-primary">Browse Full Inventory</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browse by Brand Section -->
+    <section class="dd-section dd-brands-preview">
+      <div class="dd-container">
+        <header class="dd-section-header">
+          <h2>Browse by Brand</h2>
+          <p>Choose from popular car brands available on DriveDeck.</p>
+        </header>
+        <div class="dd-brand-grid">
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/tata.svg" alt="Tata">
+            </div>
+            <span class="dd-brand-name">Tata</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/hyundai.svg" alt="Hyundai">
+            </div>
+            <span class="dd-brand-name">Hyundai</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/toyota.svg" alt="Toyota">
+            </div>
+            <span class="dd-brand-name">Toyota</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/honda.svg" alt="Honda">
+            </div>
+            <span class="dd-brand-name">Honda</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/mahindra.svg" alt="Mahindra">
+            </div>
+            <span class="dd-brand-name">Mahindra</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/kia.svg" alt="Kia">
+            </div>
+            <span class="dd-brand-name">Kia</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/bmw.svg" alt="BMW">
+            </div>
+            <span class="dd-brand-name">BMW</span>
+          </a>
+          <a href="brands.html" class="dd-brand-card">
+            <div class="dd-brand-logo">
+              <img src="images/brands/mercedes.svg" alt="Mercedes">
+            </div>
+            <span class="dd-brand-name">Mercedes</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="dd-section dd-why-us">
+      <div class="dd-container">
+        <header class="dd-section-header">
+          <h2>Why Choose DriveDeck?</h2>
+          <p>A car buying experience designed around transparency and simplicity.</p>
+        </header>
+        <div class="dd-features-grid">
+          <div class="dd-feature-card">
+            <h3>Curated Inventory</h3>
+            <p>Every listing is reviewed to ensure accurate details and fair pricing.</p>
+          </div>
+          <div class="dd-feature-card">
+            <h3>Smart Comparison</h3>
+            <p>Shortlist and compare cars side by side to find your perfect match.</p>
+          </div>
+          <div class="dd-feature-card">
+            <h3>Wishlist & Tracking</h3>
+            <p>Save favorites and revisit them anytime with your personal wishlist.</p>
+          </div>
+          <div class="dd-feature-card">
+            <h3>Dealer Transparency</h3>
+            <p>View dealer details clearly so you know exactly who you are buying from.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="dd-section dd-testimonials">
+      <div class="dd-container">
+        <header class="dd-section-header">
+          <h2>What Buyers Say</h2>
+          <p>Real experiences from people who found their car on DriveDeck.</p>
+        </header>
+        <div class="dd-testimonials-grid">
+          <article class="dd-testimonial-card">
+            <p>“DriveDeck made shortlisting and comparing SUVs incredibly easy. I found my car in a weekend.”</p>
+            <h3>Rohit Sharma</h3>
+            <span>Hyderabad</span>
+          </article>
+          <article class="dd-testimonial-card">
+            <p>“Loved the clean layout and filters. I could quickly narrow down to cars in my budget.”</p>
+            <h3>Ananya Patel</h3>
+            <span>Bengaluru</span>
+          </article>
+          <article class="dd-testimonial-card">
+            <p>“The wishlist and compare features saved me so much time while researching options.”</p>
+            <h3>Vikram Singh</h3>
+            <span>Pune</span>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dd-footer">
+    <div class="dd-container dd-footer-container">
+      <div class="dd-footer-brand">
+        <h3>DriveDeck</h3>
+        <p>Your digital showroom for smarter car buying decisions.</p>
+      </div>
+      <div class="dd-footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="brands.html">Brands</a></li>
+        </ul>
+      </div>
+      <div class="dd-footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@drivedeck.com</p>
+        <p>Phone: +91-98765-43210</p>
+      </div>
+    </div>
+    <div class="dd-footer-bottom">
+      <p>&copy; <span id="dd-year">2026</span> DriveDeck. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/cars-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

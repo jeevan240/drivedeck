@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveDeck | Brands</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="brands">
+  <header class="dd-header">
+    <div class="dd-container dd-header-container">
+      <a href="index.html" class="dd-logo">DriveDeck</a>
+      <button class="dd-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="dd-nav">
+        <ul class="dd-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dd-nav-auth-guest"><a href="login.html">Login</a></li>
+          <li class="dd-nav-auth-guest"><a href="signup.html">Create Account</a></li>
+          <li class="dd-nav-auth-user" style="display:none"><span class="dd-nav-user-name"></span></li>
+          <li class="dd-nav-auth-user" style="display:none"><a href="#" class="dd-btn-logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="dd-page-header">
+      <div class="dd-container">
+        <h1>Browse by Brand</h1>
+        <p>Select a brand to explore its cars in the inventory.</p>
+      </div>
+    </section>
+
+    <section class="dd-section dd-brands-section">
+      <div class="dd-container">
+        <div class="dd-brand-grid" id="brand-grid">
+          <button type="button" class="dd-brand-card" data-brand="Tata">
+            <div class="dd-brand-logo">
+              <img src="images/brands/tata.svg" alt="Tata logo">
+            </div>
+            <div class="dd-brand-name">Tata</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="Hyundai">
+            <div class="dd-brand-logo">
+              <img src="images/brands/hyundai.svg" alt="Hyundai logo">
+            </div>
+            <div class="dd-brand-name">Hyundai</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="Toyota">
+            <div class="dd-brand-logo">
+              <img src="images/brands/toyota.svg" alt="Toyota logo">
+            </div>
+            <div class="dd-brand-name">Toyota</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="Honda">
+            <div class="dd-brand-logo">
+              <img src="images/brands/honda.svg" alt="Honda logo">
+            </div>
+            <div class="dd-brand-name">Honda</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="Mahindra">
+            <div class="dd-brand-logo">
+              <img src="images/brands/mahindra.svg" alt="Mahindra logo">
+            </div>
+            <div class="dd-brand-name">Mahindra</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="Kia">
+            <div class="dd-brand-logo">
+              <img src="images/brands/kia.svg" alt="Kia logo">
+            </div>
+            <div class="dd-brand-name">Kia</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="BMW">
+            <div class="dd-brand-logo">
+              <img src="images/brands/bmw.svg" alt="BMW logo">
+            </div>
+            <div class="dd-brand-name">BMW</div>
+          </button>
+
+          <button type="button" class="dd-brand-card" data-brand="Mercedes">
+            <div class="dd-brand-logo">
+              <img src="images/brands/mercedes.svg" alt="Mercedes logo">
+            </div>
+            <div class="dd-brand-name">Mercedes</div>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="dd-footer">
+    <div class="dd-container dd-footer-container">
+      <div class="dd-footer-brand">
+        <h3>DriveDeck</h3>
+        <p>Your digital showroom for smarter car buying decisions.</p>
+      </div>
+      <div class="dd-footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="brands.html">Brands</a></li>
+        </ul>
+      </div>
+      <div class="dd-footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@drivedeck.com</p>
+        <p>Phone: +91-98765-43210</p>
+      </div>
+    </div>
+    <div class="dd-footer-bottom">
+      <p>&copy; <span id="dd-year">2026</span> DriveDeck. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/cars-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

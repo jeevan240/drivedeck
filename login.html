@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveDeck | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <header class="dd-header">
+    <div class="dd-container dd-header-container">
+      <a href="index.html" class="dd-logo">DriveDeck</a>
+      <button class="dd-nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="dd-nav">
+        <ul class="dd-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="brands.html">Brands</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dd-nav-auth-guest"><a href="login.html">Login</a></li>
+          <li class="dd-nav-auth-guest"><a href="signup.html">Create Account</a></li>
+          <li class="dd-nav-auth-user" style="display:none"><span class="dd-nav-user-name"></span></li>
+          <li class="dd-nav-auth-user" style="display:none"><a href="#" class="dd-btn-logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dd-auth-page">
+    <div class="dd-auth-card">
+      <h1>Login</h1>
+      <p class="dd-auth-subtitle">Sign in to your DriveDeck account.</p>
+
+      <form id="login-form" class="dd-auth-form" novalidate>
+        <div class="dd-form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <div id="login-email-error" class="dd-form-error" role="alert" aria-live="polite"></div>
+        </div>
+        <div class="dd-form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" placeholder="••••••••" required autocomplete="current-password">
+          <div id="login-password-error" class="dd-form-error" role="alert" aria-live="polite"></div>
+        </div>
+        <div id="login-form-error" class="dd-form-error" role="alert" aria-live="polite"></div>
+        <button type="submit" class="dd-btn dd-btn-primary">Sign In</button>
+      </form>
+
+      <p class="dd-auth-footer">
+        Don't have an account? <a href="signup.html">Create Account</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="dd-footer">
+    <div class="dd-container dd-footer-container">
+      <div class="dd-footer-brand">
+        <h3>DriveDeck</h3>
+        <p>Your digital showroom for smarter car buying decisions.</p>
+      </div>
+      <div class="dd-footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="brands.html">Brands</a></li>
+        </ul>
+      </div>
+      <div class="dd-footer-contact">
+        <h4>Contact</h4>
+        <p>Email: contact@drivedeck.com</p>
+        <p>Phone: +91-98765-43210</p>
+      </div>
+    </div>
+    <div class="dd-footer-bottom">
+      <p>&copy; <span id="dd-year">2026</span> DriveDeck. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    (function () {
+      if (window.DriveDeckAuth && window.DriveDeckAuth.getSession && window.DriveDeckAuth.getSession()) {
+        window.location.href = 'index.html';
+        return;
+      }
+      var form = document.getElementById('login-form');
+      var formError = document.getElementById('login-form-error');
+      var emailError = document.getElementById('login-email-error');
+      var passwordError = document.getElementById('login-password-error');
+
+      function clearErrors() {
+        formError.textContent = '';
+        emailError.textContent = '';
+        passwordError.textContent = '';
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          clearErrors();
+          var email = (document.getElementById('login-email') && document.getElementById('login-email').value) || '';
+          var password = (document.getElementById('login-password') && document.getElementById('login-password').value) || '';
+          if (!email.trim()) {
+            emailError.textContent = 'Email is required.';
+            return;
+          }
+          if (!password) {
+            passwordError.textContent = 'Password is required.';
+            return;
+          }
+          var result = window.DriveDeckAuth.login(email, password);
+          if (result.ok) {
+            window.location.href = 'index.html';
+          } else {
+            formError.textContent = result.message || 'Login failed.';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

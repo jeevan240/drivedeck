@@ -1,0 +1,1525 @@
+/* =========================
+   Base & Global Styles
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+.dd-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main {
+  padding-top: 4.5rem; /* account for sticky header */
+}
+
+.dd-section {
+  padding: 3rem 0;
+}
+
+.dd-section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dd-section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dd-section-header p {
+  color: #6b7280;
+}
+
+/* =========================
+   Buttons
+   ========================= */
+
+.dd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.675rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease, border-color 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dd-btn-primary {
+  background-color: #1e3a8a;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(30, 58, 138, 0.25);
+}
+
+.dd-btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(30, 64, 175, 0.35);
+}
+
+.dd-btn-outline {
+  background-color: #fff;
+  color: #1e3a8a;
+  border-color: #1e3a8a;
+}
+
+.dd-btn-outline:hover {
+  background-color: #1e3a8a;
+  color: #fff;
+}
+
+.dd-btn-ghost {
+  background-color: transparent;
+  color: #1e3a8a;
+  border-color: transparent;
+}
+
+.dd-btn-ghost:hover {
+  background-color: rgba(30, 58, 138, 0.07);
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+
+.dd-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+}
+
+.dd-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+}
+
+.dd-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 0.03em;
+}
+
+.dd-nav {
+  display: flex;
+}
+
+.dd-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.dd-nav-list a {
+  font-size: 0.95rem;
+  color: #374151;
+  padding: 0.35rem 0;
+  position: relative;
+}
+
+.dd-nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1e3a8a, #f97316);
+  transition: width 0.2s ease;
+}
+
+.dd-nav-list a:hover::after {
+  width: 100%;
+}
+
+.dd-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+}
+
+.dd-nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #111827;
+  border-radius: 999px;
+}
+
+/* class to be toggled by JS later */
+.dd-nav-open .dd-nav {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* =========================
+   Page Header
+   ========================= */
+
+.dd-page-header {
+  padding: 3rem 0 1.5rem;
+}
+
+.dd-page-header h1 {
+  font-size: 2rem;
+}
+
+.dd-page-header p {
+  color: #6b7280;
+}
+
+.dd-breadcrumb-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+
+.dd-hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 64, 175, 0.85)),
+    url("../images/hero-placeholder.jpg") center/cover no-repeat;
+  color: #fff;
+}
+
+.dd-hero-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.dd-hero-text h1 {
+  font-size: clamp(2.1rem, 3vw, 2.8rem);
+  margin-bottom: 0.75rem;
+}
+
+.dd-hero-text p {
+  color: #e5e7eb;
+  max-width: 34rem;
+  margin-bottom: 1.5rem;
+}
+
+.dd-hero-search {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 0.9rem;
+  border-radius: 999px;
+  background-color: rgba(15, 23, 42, 0.8);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.5);
+}
+
+.dd-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.dd-form-group label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  margin-bottom: 0.2rem;
+}
+
+.dd-form-group input,
+.dd-form-group select,
+.dd-contact-form input,
+.dd-contact-form textarea {
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.dd-contact-form textarea {
+  border-radius: 0.75rem;
+  resize: vertical;
+  min-height: 150px;
+}
+
+.dd-form-group input:focus,
+.dd-form-group select:focus,
+.dd-contact-form input:focus,
+.dd-contact-form textarea:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 1px rgba(30, 58, 138, 0.5);
+  background-color: #ffffff;
+}
+
+.dd-hero-highlight {
+  align-self: stretch;
+}
+
+.dd-hero-stats {
+  display: grid;
+  gap: 1rem;
+}
+
+.dd-hero-stat {
+  padding: 1.1rem 1.25rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.6);
+}
+
+.dd-hero-stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.dd-hero-stat-label {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+}
+
+/* =========================
+   Cars Grid & Cards
+   ========================= */
+
+.dd-cars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.dd-car-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+
+.dd-car-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.04), rgba(249, 115, 22, 0.02));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.dd-car-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.16);
+}
+
+.dd-car-card:hover::before {
+  opacity: 1;
+}
+
+.dd-car-image-placeholder,
+.dd-compare-image {
+  position: relative;
+  padding-top: 60%;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+
+.dd-car-image-placeholder img,
+.dd-compare-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.4s ease;
+}
+
+.dd-car-card:hover .dd-car-image-placeholder img {
+  transform: scale(1.07);
+}
+
+.dd-car-content {
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.dd-car-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.dd-car-price {
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 0.4rem;
+}
+
+.dd-car-meta,
+.dd-car-meta-secondary {
+  font-size: 0.85rem;
+  color: #6b7280;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.dd-car-meta-secondary {
+  justify-content: space-between;
+}
+
+.dd-car-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.dd-car-actions .dd-btn {
+  flex: 1;
+}
+
+.dd-car-compare {
+  padding: 0.75rem 1.1rem 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.dd-car-compare input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+/* =========================
+   Featured Section
+   ========================= */
+
+.dd-featured-cars {
+  background-color: #f9fafb;
+}
+
+.dd-section-cta {
+  text-align: center;
+  margin-top: 1.75rem;
+}
+
+/* =========================
+   Brand Grid
+   ========================= */
+
+.dd-brand-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.dd-brand-card {
+  background-color: #fff;
+  border-radius: 0.9rem;
+  padding: 1.25rem 1rem;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.dd-brand-card:hover {
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.14);
+  transform: translateY(-3px);
+  border-color: #1e3a8a33;
+  background-color: #eff6ff;
+}
+
+.dd-brand-logo,
+.dd-brand-logo-placeholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5e7eb;
+  color: #111827;
+  font-weight: 600;
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+
+.dd-brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.dd-brand-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* =========================
+   Inventory Layout & Filters
+   ========================= */
+
+.dd-inventory-controls {
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.dd-inventory-controls-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.dd-search-bar {
+  flex: 1.4;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.dd-sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.dd-sort-controls select {
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+}
+
+.dd-inventory-layout {
+  padding-top: 1.5rem;
+}
+
+.dd-inventory-layout-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 2.4fr);
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+.dd-filters-sidebar {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.2rem 1.1rem;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  position: sticky;
+  top: 5.25rem;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+}
+
+.dd-filters-sidebar h2 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.dd-filter-group {
+  padding: 0.75rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.dd-filter-group:first-of-type {
+  border-top: none;
+}
+
+.dd-filter-group h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #4b5563;
+}
+
+.dd-filter-options label {
+  display: block;
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+.dd-filter-options input[type="checkbox"],
+.dd-filter-options input[type="radio"] {
+  margin-right: 0.4rem;
+}
+
+.dd-inventory-results {
+  min-height: 200px;
+}
+
+.dd-inventory-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.dd-no-results,
+.dd-empty-wishlist {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.dd-empty-wishlist a {
+  color: #1e3a8a;
+  text-decoration: underline;
+}
+
+/* =========================
+   Car Details Page
+   ========================= */
+
+.dd-car-details-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+  gap: 2rem;
+}
+
+.dd-car-gallery-main {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #e5e7eb;
+}
+
+.dd-car-gallery-main img {
+  width: 100%;
+  height: 100%;
+  max-height: 380px;
+  object-fit: cover;
+}
+
+.dd-car-gallery-thumbs {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.dd-thumb {
+  flex: 1;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dd-thumb img {
+  width: 100%;
+  height: 64px;
+  object-fit: cover;
+}
+
+.dd-thumb.is-active {
+  border-color: #f97316;
+}
+
+.dd-car-summary {
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+}
+
+.dd-car-price-block {
+  margin-bottom: 0.5rem;
+}
+
+.dd-car-price-block .dd-car-price {
+  font-size: 1.4rem;
+}
+
+.dd-car-price-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.dd-car-key-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.dd-spec-item {
+  font-size: 0.85rem;
+}
+
+.dd-spec-label {
+  display: block;
+  color: #6b7280;
+}
+
+.dd-spec-value {
+  font-weight: 500;
+}
+
+.dd-car-actions-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.dd-car-rating-block {
+  font-size: 0.9rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dd-car-rating-value {
+  font-weight: 600;
+  color: #f97316;
+}
+
+.dd-car-specifications {
+  background-color: #f9fafb;
+}
+
+.dd-specs-table-wrapper {
+  overflow-x: auto;
+}
+
+.dd-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.dd-specs-table th,
+.dd-specs-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dd-specs-table th {
+  width: 30%;
+  text-align: left;
+  color: #4b5563;
+  background-color: #f3f4f6;
+}
+
+.dd-specs-table tr:nth-child(even) td {
+  background-color: #f9fafb;
+}
+
+.dd-car-features-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.dd-features-column ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.dd-car-description p {
+  max-width: 48rem;
+}
+
+/* =========================
+   Compare Page
+   ========================= */
+
+.dd-compare-section {
+  background-color: #f9fafb;
+}
+
+.dd-compare-intro {
+  margin-bottom: 1rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.dd-compare-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dd-compare-table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.12);
+  font-size: 0.9rem;
+}
+
+.dd-compare-table thead th {
+  background: linear-gradient(90deg, #1e3a8a, #1d4ed8);
+  color: #fff;
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+}
+
+.dd-compare-table th:first-child {
+  width: 18%;
+}
+
+.dd-compare-table tbody th {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  text-align: left;
+}
+
+.dd-compare-table td,
+.dd-compare-table th {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.7rem 0.75rem;
+  vertical-align: top;
+}
+
+.dd-compare-table tbody tr:nth-child(even) td {
+  background-color: #f9fafb;
+}
+
+.dd-compare-car-title {
+  font-weight: 600;
+}
+
+.dd-compare-car-meta {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.dd-compare-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* =========================
+   Wishlist Page
+   ========================= */
+
+.dd-wishlist-section {
+  background-color: #f9fafb;
+}
+
+.dd-wishlist-summary {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* =========================
+   About Page & Team
+   ========================= */
+
+.dd-about-section {
+  background-color: #ffffff;
+}
+
+.dd-about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.dd-about-intro p {
+  color: #4b5563;
+}
+
+.dd-about-highlight {
+  background-color: #eff6ff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.3rem;
+  border: 1px solid #bfdbfe;
+}
+
+.dd-about-highlight h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.dd-about-highlight ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: #4b5563;
+}
+
+.dd-mission-section {
+  background-color: #f9fafb;
+}
+
+.dd-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.dd-team-section {
+  background-color: #ffffff;
+}
+
+.dd-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.dd-team-card {
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  padding: 1.25rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.dd-team-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  margin: 0 auto 0.6rem;
+  background: linear-gradient(135deg, #1e3a8a, #f97316);
+  opacity: 0.9;
+}
+
+.dd-team-role {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.4rem;
+}
+
+.dd-team-bio {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* =========================
+   Contact Page
+   ========================= */
+
+.dd-contact-section {
+  background-color: #ffffff;
+}
+
+.dd-contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.dd-contact-form-wrapper h2 {
+  margin-bottom: 0.75rem;
+}
+
+.dd-contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem 1rem;
+}
+
+.dd-contact-form .dd-form-group:nth-child(4),
+.dd-contact-form .dd-form-group:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+.dd-contact-form button {
+  width: fit-content;
+}
+
+.dd-contact-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+.dd-contact-details {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.dd-contact-details li {
+  margin-bottom: 0.4rem;
+}
+
+.dd-map-section {
+  background-color: #f9fafb;
+}
+
+.dd-map-container {
+  margin-top: 1rem;
+  border-radius: 1rem;
+  background: repeating-linear-gradient(
+    45deg,
+    #e5e7eb,
+    #e5e7eb 10px,
+    #f3f4f6 10px,
+    #f3f4f6 20px
+  );
+  min-height: 260px;
+  border: 1px dashed #cbd5f5;
+}
+
+/* =========================
+   Testimonials & Why Us
+   ========================= */
+
+.dd-why-us {
+  background-color: #ffffff;
+}
+
+.dd-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.dd-feature-card {
+  background-color: #f9fafb;
+  border-radius: 0.9rem;
+  padding: 1.1rem 1.1rem;
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.dd-testimonials {
+  background-color: #f9fafb;
+}
+
+.dd-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.dd-testimonial-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem 1.25rem;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  font-size: 0.9rem;
+}
+
+.dd-testimonial-card h3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.1rem;
+}
+
+.dd-testimonial-card span {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.dd-footer {
+  background-color: #020617;
+  color: #e5e7eb;
+  margin-top: 3rem;
+}
+
+.dd-footer-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 2rem;
+  padding: 2.5rem 1.25rem 1.75rem;
+}
+
+.dd-footer-brand h3 {
+  color: #f9fafb;
+  font-size: 1.4rem;
+}
+
+.dd-footer-brand p {
+  color: #9ca3af;
+  max-width: 20rem;
+}
+
+.dd-footer-links h4,
+.dd-footer-contact h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.dd-footer-links ul li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.dd-footer-links a {
+  color: #e5e7eb;
+}
+
+.dd-footer-links a:hover {
+  color: #f97316;
+}
+
+.dd-footer-contact p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.dd-footer-bottom {
+  border-top: 1px solid #1f2937;
+  text-align: center;
+  padding: 0.75rem 1.25rem 1.25rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* =========================
+   Utilities
+   ========================= */
+
+.dd-page-header,
+.dd-section,
+.dd-footer-container {
+  transition: padding 0.2s ease;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+
+@media (max-width: 1200px) {
+  .dd-hero-content {
+    gap: 2.25rem;
+  }
+
+  .dd-features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .dd-hero-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-hero-highlight {
+    order: -1;
+  }
+
+  .dd-hero-search {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 1.25rem;
+  }
+
+  .dd-inventory-layout-container {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
+  }
+
+  .dd-about-layout,
+  .dd-contact-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-two-column {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-footer-container {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 4rem;
+  }
+
+  .dd-header-container {
+    padding-inline: 1rem;
+  }
+
+  .dd-nav-toggle {
+    display: flex;
+  }
+
+  .dd-nav {
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    background-color: #ffffffee;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+  }
+
+  .dd-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.6rem 1.25rem 0.9rem;
+    gap: 0.35rem;
+  }
+
+  .dd-hero {
+    min-height: 70vh;
+  }
+
+  .dd-hero-content {
+    padding-block: 2.5rem;
+  }
+
+  .dd-hero-search {
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 1.25rem;
+  }
+
+  .dd-cars-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-brand-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dd-inventory-controls-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dd-search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dd-inventory-layout-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-filters-sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .dd-car-details-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-car-features-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-features-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-testimonials-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-team-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-contact-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-contact-form .dd-form-group:nth-child(4),
+  .dd-contact-form .dd-form-group:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .dd-footer-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .dd-container {
+    padding-inline: 1rem;
+  }
+
+  .dd-section {
+    padding: 2.25rem 0;
+  }
+
+  .dd-page-header {
+    padding-top: 2.25rem;
+  }
+
+  .dd-cars-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dd-brand-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dd-footer-container {
+    padding-inline: 1rem;
+  }
+}
+
+/* =========================
+   Auth (Login / Signup)
+   ========================= */
+
+.dd-auth-page {
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.dd-auth-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e5e7eb;
+  padding: 2rem;
+}
+
+.dd-auth-card h1 {
+  margin-bottom: 0.25rem;
+  font-size: 1.75rem;
+}
+
+.dd-auth-card .dd-auth-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.dd-auth-form .dd-form-group {
+  margin-bottom: 1rem;
+}
+
+.dd-auth-form .dd-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.35rem;
+}
+
+.dd-auth-form .dd-form-group input {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.dd-auth-form .dd-form-group input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+}
+
+.dd-auth-form .dd-form-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.dd-auth-form .dd-form-success {
+  color: #059669;
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.dd-auth-form .dd-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+}
+
+.dd-auth-form .dd-auth-footer {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.dd-auth-form .dd-auth-footer a {
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.dd-nav-user-name {
+  font-weight: 500;
+  color: #1e3a8a;
+}
+
+/* Login required modal */
+.dd-login-required-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.dd-login-required-modal {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+  max-width: 360px;
+  width: 100%;
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.dd-login-required-modal p {
+  margin: 0 0 1.25rem;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.dd-login-required-modal .dd-btn {
+  margin-right: 0.5rem;
+}
+
+.dd-login-required-modal .dd-btn-ghost {
+  margin-right: 0;
+}
+
+/* Toast */
+.dd-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #fff;
+  padding: 0.65rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  animation: dd-toast-in 0.25s ease;
+}
+
+@keyframes dd-toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
