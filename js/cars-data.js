@@ -11,7 +11,12 @@ const carsData = [
     engine: "1199 cc",
     rating: 4.5,
     image: "images/cars/tata-nexon.jpg",
-    description: "A compact SUV with strong safety ratings, punchy performance, and practical cabin space for city and highway use."
+    description: "A compact SUV with strong safety ratings, punchy performance, and practical cabin space for city and highway use.",
+    power: "118 bhp",
+    torque: "170 Nm",
+    drivetrain: "FWD",
+    color: "White",
+    registeredCity: "Pune"
   },
   {
     id: 2,
@@ -25,7 +30,12 @@ const carsData = [
     engine: "Permanent Magnet Synchronous Motor",
     rating: 4.6,
     image: "images/cars/tata-nexon-ev.jpg",
-    description: "An all-electric version of the Nexon offering brisk acceleration, low running costs, and practical real-world range."
+    description: "An all-electric version of the Nexon offering brisk acceleration, low running costs, and practical real-world range.",
+    power: "129 bhp",
+    torque: "245 Nm",
+    drivetrain: "FWD",
+    color: "Blue",
+    registeredCity: "Bangalore"
   },
   {
     id: 3,
@@ -39,7 +49,12 @@ const carsData = [
     engine: "1956 cc",
     rating: 4.4,
     image: "images/cars/tata-harrier.jpg",
-    description: "A bold-looking mid-size SUV with a spacious cabin, strong diesel engine, and commanding road presence."
+    description: "A bold-looking mid-size SUV with a spacious cabin, strong diesel engine, and commanding road presence.",
+    power: "168 bhp",
+    torque: "350 Nm",
+    drivetrain: "FWD",
+    color: "Black",
+    registeredCity: "Mumbai"
   },
   {
     id: 4,
@@ -53,7 +68,12 @@ const carsData = [
     engine: "1199 cc",
     rating: 4.2,
     image: "images/cars/tata-altroz.jpg",
-    description: "A premium hatchback known for its 5-star safety rating, solid build quality, and comfortable ride."
+    description: "A premium hatchback known for its 5-star safety rating, solid build quality, and comfortable ride.",
+    power: "88 bhp",
+    torque: "113 Nm",
+    drivetrain: "FWD",
+    color: "Silver",
+    registeredCity: "Chennai"
   },
   {
     id: 5,
@@ -67,7 +87,12 @@ const carsData = [
     engine: "1497 cc",
     rating: 4.7,
     image: "images/cars/hyundai-creta.jpg",
-    description: "A hugely popular compact SUV offering a feature-rich cabin, refined engine options, and a comfortable ride."
+    description: "A hugely popular compact SUV offering a feature-rich cabin, refined engine options, and a comfortable ride.",
+    power: "113 bhp",
+    torque: "144 Nm",
+    drivetrain: "FWD",
+    color: "White",
+    registeredCity: "Hyderabad"
   },
   {
     id: 6,
@@ -81,7 +106,12 @@ const carsData = [
     engine: "998 cc",
     rating: 4.3,
     image: "images/cars/hyundai-venue.jpg",
-    description: "A compact urban SUV with connected-car features, peppy turbo engine options, and easy city maneuverability."
+    description: "A compact urban SUV with connected-car features, peppy turbo engine options, and easy city maneuverability.",
+    power: "118 bhp",
+    torque: "172 Nm",
+    drivetrain: "FWD",
+    color: "Red",
+    registeredCity: "Delhi"
   },
   {
     id: 7,
@@ -95,7 +125,12 @@ const carsData = [
     engine: "1197 cc",
     rating: 4.1,
     image: "images/cars/hyundai-i20.jpg",
-    description: "A premium hatchback with a stylish design, well-finished interiors, and multiple engine and transmission choices."
+    description: "A premium hatchback with a stylish design, well-finished interiors, and multiple engine and transmission choices.",
+    power: "88 bhp",
+    torque: "115 Nm",
+    drivetrain: "FWD",
+    color: "Grey",
+    registeredCity: "Ahmedabad"
   },
   {
     id: 8,
@@ -109,7 +144,12 @@ const carsData = [
     engine: "1482 cc",
     rating: 4.4,
     image: "images/cars/hyundai-verna.jpg",
-    description: "A feature-loaded mid-size sedan with a strong turbo-petrol engine and a comfortable, premium cabin."
+    description: "A feature-loaded mid-size sedan with a strong turbo-petrol engine and a comfortable, premium cabin.",
+    power: "158 bhp",
+    torque: "253 Nm",
+    drivetrain: "FWD",
+    color: "Black",
+    registeredCity: "Kolkata"
   },
   {
     id: 9,
@@ -123,7 +163,12 @@ const carsData = [
     engine: "2755 cc",
     rating: 4.6,
     image: "images/cars/toyota-fortuner.jpg",
-    description: "A full-size ladder-frame SUV renowned for its reliability, off-road capability, and strong resale value."
+    description: "A full-size ladder-frame SUV renowned for its reliability, off-road capability, and strong resale value.",
+    power: "201 bhp",
+    torque: "500 Nm",
+    drivetrain: "4WD",
+    color: "White",
+    registeredCity: "Mumbai"
   },
   {
     id: 10,
@@ -137,7 +182,12 @@ const carsData = [
     engine: "2393 cc",
     rating: 4.7,
     image: "images/cars/toyota-innova-crysta.jpg",
-    description: "A benchmark people-mover offering excellent comfort, durability, and long-distance touring abilities."
+    description: "A benchmark people-mover offering excellent comfort, durability, and long-distance touring abilities.",
+    power: "174 bhp",
+    torque: "360 Nm",
+    drivetrain: "RWD",
+    color: "Silver",
+    registeredCity: "Bangalore"
   },
   {
     id: 11,
@@ -151,7 +201,12 @@ const carsData = [
     engine: "1197 cc",
     rating: 4.0,
     image: "images/cars/toyota-glanza.jpg",
-    description: "A premium hatchback with efficient petrol engines, comfortable seating, and a smooth city driving experience."
+    description: "A premium hatchback with efficient petrol engines, comfortable seating, and a smooth city driving experience.",
+    power: "88 bhp",
+    torque: "113 Nm",
+    drivetrain: "FWD",
+    color: "Blue",
+    registeredCity: "Pune"
   },
   {
     id: 12,
@@ -165,7 +220,12 @@ const carsData = [
     engine: "1490 cc",
     rating: 4.5,
     image: "images/cars/toyota-urban-cruiser-hyryder.jpg",
-    description: "A strong-hybrid mid-size SUV delivering excellent fuel efficiency and smooth, quiet electric-assisted driving."
+    description: "A strong-hybrid mid-size SUV delivering excellent fuel efficiency and smooth, quiet electric-assisted driving.",
+    power: "91 bhp",
+    torque: "122 Nm",
+    drivetrain: "FWD",
+    color: "Grey",
+    registeredCity: "Chennai"
   },
   {
     id: 13,
@@ -179,7 +239,12 @@ const carsData = [
     engine: "1498 cc",
     rating: 4.6,
     image: "images/cars/honda-city.jpg",
-    description: "A legendary mid-size sedan known for its refined engine, spacious cabin, and strong reliability."
+    description: "A legendary mid-size sedan known for its refined engine, spacious cabin, and strong reliability.",
+    power: "121 bhp",
+    torque: "145 Nm",
+    drivetrain: "FWD",
+    color: "White",
+    registeredCity: "Hyderabad"
   },
   {
     id: 14,
@@ -193,7 +258,12 @@ const carsData = [
     engine: "1199 cc",
     rating: 4.0,
     image: "images/cars/honda-amaze.jpg",
-    description: "A compact sedan offering a comfortable ride, practical boot space, and smooth automatic gearbox options."
+    description: "A compact sedan offering a comfortable ride, practical boot space, and smooth automatic gearbox options.",
+    power: "89 bhp",
+    torque: "110 Nm",
+    drivetrain: "FWD",
+    color: "Silver",
+    registeredCity: "Delhi"
   },
   {
     id: 15,
@@ -207,7 +277,12 @@ const carsData = [
     engine: "1498 cc",
     rating: 3.9,
     image: "images/cars/honda-wrv.jpg",
-    description: "A crossover-styled hatchback with good ground clearance and a fuel-efficient diesel engine."
+    description: "A crossover-styled hatchback with good ground clearance and a fuel-efficient diesel engine.",
+    power: "99 bhp",
+    torque: "200 Nm",
+    drivetrain: "FWD",
+    color: "Red",
+    registeredCity: "Ahmedabad"
   },
   {
     id: 16,
@@ -221,7 +296,12 @@ const carsData = [
     engine: "2184 cc",
     rating: 4.8,
     image: "images/cars/mahindra-xuv700.jpg",
-    description: "A tech-loaded SUV with powerful engines, ADAS features, and an impressive highway cruising ability."
+    description: "A tech-loaded SUV with powerful engines, ADAS features, and an impressive highway cruising ability.",
+    power: "182 bhp",
+    torque: "450 Nm",
+    drivetrain: "AWD",
+    color: "Black",
+    registeredCity: "Mumbai"
   },
   {
     id: 17,
@@ -235,7 +315,12 @@ const carsData = [
     engine: "2184 cc",
     rating: 4.4,
     image: "images/cars/mahindra-scorpio-n.jpg",
-    description: "A rugged SUV combining traditional Scorpio toughness with a more premium and comfortable interior."
+    description: "A rugged SUV combining traditional Scorpio toughness with a more premium and comfortable interior.",
+    power: "172 bhp",
+    torque: "370 Nm",
+    drivetrain: "4WD",
+    color: "White",
+    registeredCity: "Pune"
   },
   {
     id: 18,
@@ -249,7 +334,12 @@ const carsData = [
     engine: "2184 cc",
     rating: 4.3,
     image: "images/cars/mahindra-thar.jpg",
-    description: "An iconic off-roader with modern comforts, removable roof options, and excellent off-road capability."
+    description: "An iconic off-roader with modern comforts, removable roof options, and excellent off-road capability.",
+    power: "150 bhp",
+    torque: "320 Nm",
+    drivetrain: "4WD",
+    color: "Red",
+    registeredCity: "Bangalore"
   },
   {
     id: 19,
@@ -263,7 +353,12 @@ const carsData = [
     engine: "1493 cc",
     rating: 3.8,
     image: "images/cars/mahindra-bolero-neo.jpg",
-    description: "A tough, ladder-frame SUV designed for rough roads, offering durable mechanicals and practical seating."
+    description: "A tough, ladder-frame SUV designed for rough roads, offering durable mechanicals and practical seating.",
+    power: "118 bhp",
+    torque: "300 Nm",
+    drivetrain: "RWD",
+    color: "Grey",
+    registeredCity: "Kolkata"
   },
   {
     id: 20,
@@ -277,7 +372,12 @@ const carsData = [
     engine: "1482 cc",
     rating: 4.5,
     image: "images/cars/kia-seltos.jpg",
-    description: "A stylish mid-size SUV with a premium interior, multiple powertrain choices, and strong feature list."
+    description: "A stylish mid-size SUV with a premium interior, multiple powertrain choices, and strong feature list.",
+    power: "158 bhp",
+    torque: "253 Nm",
+    drivetrain: "FWD",
+    color: "Blue",
+    registeredCity: "Hyderabad"
   },
   {
     id: 21,
@@ -291,7 +391,12 @@ const carsData = [
     engine: "1493 cc",
     rating: 4.2,
     image: "images/cars/kia-sonet.jpg",
-    description: "A compact SUV packed with features, offering multiple engine options and a youthful, sporty design."
+    description: "A compact SUV packed with features, offering multiple engine options and a youthful, sporty design.",
+    power: "113 bhp",
+    torque: "250 Nm",
+    drivetrain: "FWD",
+    color: "White",
+    registeredCity: "Chennai"
   },
   {
     id: 22,
@@ -305,7 +410,12 @@ const carsData = [
     engine: "1497 cc",
     rating: 4.1,
     image: "images/cars/kia-carens.jpg",
-    description: "A three-row MPV with flexible seating, a long feature list, and a family-friendly cabin."
+    description: "A three-row MPV with flexible seating, a long feature list, and a family-friendly cabin.",
+    power: "158 bhp",
+    torque: "253 Nm",
+    drivetrain: "FWD",
+    color: "Silver",
+    registeredCity: "Delhi"
   },
   {
     id: 23,
@@ -319,7 +429,12 @@ const carsData = [
     engine: "1998 cc",
     rating: 4.6,
     image: "images/cars/bmw-x1.jpg",
-    description: "A premium compact luxury SUV offering a refined drive, high-quality interiors, and strong brand appeal."
+    description: "A premium compact luxury SUV offering a refined drive, high-quality interiors, and strong brand appeal.",
+    power: "189 bhp",
+    torque: "280 Nm",
+    drivetrain: "AWD",
+    color: "Black",
+    registeredCity: "Mumbai"
   },
   {
     id: 24,
@@ -333,7 +448,12 @@ const carsData = [
     engine: "1995 cc",
     rating: 4.5,
     image: "images/cars/bmw-x3.jpg",
-    description: "A mid-size luxury SUV balancing sporty dynamics with comfortable long-distance touring ability."
+    description: "A mid-size luxury SUV balancing sporty dynamics with comfortable long-distance touring ability.",
+    power: "265 bhp",
+    torque: "620 Nm",
+    drivetrain: "AWD",
+    color: "Grey",
+    registeredCity: "Bangalore"
   },
   {
     id: 25,
@@ -347,7 +467,12 @@ const carsData = [
     engine: "1998 cc",
     rating: 4.7,
     image: "images/cars/bmw-3-series.jpg",
-    description: "A sport sedan icon delivering engaging handling, refined powertrains, and a driver-focused cockpit."
+    description: "A sport sedan icon delivering engaging handling, refined powertrains, and a driver-focused cockpit.",
+    power: "255 bhp",
+    torque: "400 Nm",
+    drivetrain: "RWD",
+    color: "White",
+    registeredCity: "Pune"
   },
   {
     id: 26,
@@ -361,7 +486,12 @@ const carsData = [
     engine: "2993 cc",
     rating: 4.6,
     image: "images/cars/bmw-x5.jpg",
-    description: "A large luxury SUV with powerful engines, plush interiors, and strong road presence."
+    description: "A large luxury SUV with powerful engines, plush interiors, and strong road presence.",
+    power: "335 bhp",
+    torque: "450 Nm",
+    drivetrain: "AWD",
+    color: "Black",
+    registeredCity: "Hyderabad"
   },
   {
     id: 27,
@@ -375,7 +505,12 @@ const carsData = [
     engine: "1332 cc",
     rating: 4.4,
     image: "images/cars/mercedes-gla.jpg",
-    description: "A compact luxury SUV offering the Mercedes badge, modern interiors, and comfortable city manners."
+    description: "A compact luxury SUV offering the Mercedes badge, modern interiors, and comfortable city manners.",
+    power: "161 bhp",
+    torque: "250 Nm",
+    drivetrain: "FWD",
+    color: "Silver",
+    registeredCity: "Chennai"
   },
   {
     id: 28,
@@ -389,7 +524,12 @@ const carsData = [
     engine: "1950 cc",
     rating: 4.6,
     image: "images/cars/mercedes-glc.jpg",
-    description: "A mid-size luxury SUV that combines a plush cabin, refined engines, and a relaxed driving experience."
+    description: "A mid-size luxury SUV that combines a plush cabin, refined engines, and a relaxed driving experience.",
+    power: "194 bhp",
+    torque: "400 Nm",
+    drivetrain: "AWD",
+    color: "Blue",
+    registeredCity: "Delhi"
   },
   {
     id: 29,
@@ -403,7 +543,12 @@ const carsData = [
     engine: "1993 cc",
     rating: 4.7,
     image: "images/cars/mercedes-c-class.jpg",
-    description: "A luxury sedan with a beautifully finished interior, advanced tech, and a smooth, efficient powertrain."
+    description: "A luxury sedan with a beautifully finished interior, advanced tech, and a smooth, efficient powertrain.",
+    power: "194 bhp",
+    torque: "400 Nm",
+    drivetrain: "RWD",
+    color: "Black",
+    registeredCity: "Ahmedabad"
   },
   {
     id: 30,
@@ -417,7 +562,12 @@ const carsData = [
     engine: "1991 cc",
     rating: 4.8,
     image: "images/cars/mercedes-e-class.jpg",
-    description: "An executive luxury sedan renowned for its comfort, rear-seat space, and sophisticated driving experience."
+    description: "An executive luxury sedan renowned for its comfort, rear-seat space, and sophisticated driving experience.",
+    power: "258 bhp",
+    torque: "370 Nm",
+    drivetrain: "RWD",
+    color: "White",
+    registeredCity: "Kolkata"
   }
 ];
 
