@@ -42,6 +42,11 @@
       setCellContent(prefix + 'fuel', car.fuel || '—');
       setCellContent(prefix + 'transmission', car.transmission || '—');
       setCellContent(prefix + 'engine', car.engine || '—');
+      setCellContent(prefix + 'power', car.power || '—');
+      setCellContent(prefix + 'torque', car.torque || '—');
+      setCellContent(prefix + 'drivetrain', car.drivetrain || '—');
+      setCellContent(prefix + 'color', car.color || '—');
+      setCellContent(prefix + 'registeredCity', car.registeredCity || '—');
       setCellContent(prefix + 'rating', (car.rating || '—') + ' ★');
       setCellContent(prefix + 'description', (car.description || '').substring(0, 120) + (car.description && car.description.length > 120 ? '…' : ''));
 
@@ -62,6 +67,11 @@
       setCellContent(prefix + 'fuel', empty);
       setCellContent(prefix + 'transmission', empty);
       setCellContent(prefix + 'engine', empty);
+      setCellContent(prefix + 'power', empty);
+      setCellContent(prefix + 'torque', empty);
+      setCellContent(prefix + 'drivetrain', empty);
+      setCellContent(prefix + 'color', empty);
+      setCellContent(prefix + 'registeredCity', empty);
       setCellContent(prefix + 'rating', empty);
       setCellContent(prefix + 'description', '');
       setCellHtml(prefix + 'image', '');
