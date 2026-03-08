@@ -453,12 +453,12 @@
     var seatsEl = document.getElementById('car-seats');
     var colorEl = document.getElementById('car-color');
     var cityEl = document.getElementById('car-city');
-    if (powerEl) powerEl.textContent = '—';
-    if (torqueEl) torqueEl.textContent = '—';
-    if (drivetrainEl) drivetrainEl.textContent = '—';
-    if (seatsEl) seatsEl.textContent = '5';
-    if (colorEl) colorEl.textContent = '—';
-    if (cityEl) cityEl.textContent = '—';
+    if (powerEl) powerEl.textContent = car.power || '—';
+    if (torqueEl) torqueEl.textContent = car.torque || '—';
+    if (drivetrainEl) drivetrainEl.textContent = car.drivetrain || '—';
+    if (seatsEl) seatsEl.textContent = car.seats != null ? String(car.seats) : '5';
+    if (colorEl) colorEl.textContent = car.color || '—';
+    if (cityEl) cityEl.textContent = car.registeredCity || '—';
 
     var keyFeatures = document.getElementById('car-key-features');
     var safetyFeatures = document.getElementById('car-safety-features');
